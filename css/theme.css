@@ -1,0 +1,75 @@
+html, head, body {
+	padding: 0;
+	margin:0px auto;
+	width: 100%;
+	font-family: 'Chewy', 'cursive';
+	background-color: #FCCF03;
+}
+
+#roomcode {
+	border: 3px solid #000;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.gameBtn {
+	position: relative;
+    color: #ffffff;
+    background-color:green;
+    text-decoration: none;
+    display: block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 5px solid #000;
+   	width: 60%;
+	cursor:pointer;
+	text-align: center;
+	margin:30px auto;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+
+	/*-webkit-transition: all .05s ease;
+	-moz-transition: all .05s ease;
+	-ms-transition: all .05s ease;
+	-o-transition: all .05s ease;
+	transition: all .05s ease;*/
+
+	overflow:hidden;
+	text-transform:uppercase;
+	/*font: 0/0 a;*/
+	font-size: 48px;
+    text-shadow: none;
+    /*color: transparent;*/
+}
+
+.gActive {
+	-webkit-transform: translate(0, 6px);
+	-moz-transform: translate(0, 6px);
+	transform: translate(0, 6px);
+}
+
+.idle {
+	-webkit-box-shadow: 0px 12px 0px #888;
+    -moz-box-shadow: 0px 12px 0px #888;
+    box-shadow: 0px 12px 0px #888;
+}
+
+.active {
+	-webkit-box-shadow: 0px 6px 0px #888;
+    -moz-box-shadow: 0px 6px 0px #888;
+    box-shadow: 0px 6px 0px #888;
+}
+
+#fireBtn { background:#ff0000 url("images/twitter.png") no-repeat center center;}
+#powerBtn { background:#2CA9E1 url("images/twitter.png") no-repeat center center;}
+
+
+

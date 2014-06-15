@@ -1,0 +1,188 @@
+html, head, body {
+	padding: 0;
+	margin:0px auto;
+	width: 100%;
+	font-family: 'Chewy', 'cursive';
+	background-color: #FCCF03;
+}
+
+#roomcode {
+	border: 3px solid #000;
+}
+
+#playresult {
+	font-size: 48px;
+	text-align: center;
+	color: red;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#planeTable {
+	margin: 0 auto;
+}
+
+.planeBtn {
+	background-color:green;
+	color: #ffffff;
+	position: relative;
+	display: block;
+	border: 5px solid #000;
+}
+
+.hide {
+	display: none;
+}
+
+.navButton {
+	padding: 8px;
+	background-color: green;
+	text-decoration: none;
+	color:white;
+	border: 1px solid #000;
+	-webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 15px;
+}
+
+
+/*.planeBtn {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-decoration: none;
+	background-color:green;
+	color: #ffffff;
+	position: relative;
+	display: block;
+	border: 5px solid #000;
+	font-size: 48px;
+	text-align: center;
+}*/
+
+.rotate {
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.planeSelected {
+	border: 5px solid grey;
+}
+
+.selfSelected {
+	border: 5px solid #f00;
+}
+
+
+.planeBtn img {
+	margin: 10px auto;
+}
+
+.settingBtn {
+	position: relative;
+    color: #ffffff;
+    background-color:green;
+    text-decoration: none;
+    display: block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 25px;
+    border: 5px solid #000;
+   	width: 300px;
+	cursor:pointer;
+	text-align: center;
+	margin:30px auto;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+
+	/*-webkit-transition: all .05s ease;
+	-moz-transition: all .05s ease;
+	-ms-transition: all .05s ease;
+	-o-transition: all .05s ease;
+	transition: all .05s ease;*/
+
+	overflow:hidden;
+	text-transform:uppercase;
+	/*font: 0/0 a;*/
+	font-size: 32px;
+    text-shadow: none;
+    /*color: transparent;*/
+}
+
+.gameBtn {
+	position: relative;
+    color: #ffffff;
+    background-color:green;
+    text-decoration: none;
+    display: block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 5px solid #000;
+   	width: 60%;
+	cursor:pointer;
+	text-align: center;
+	margin:30px auto;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+    -webkit-touch-callout: none;
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+
+	/*-webkit-transition: all .05s ease;
+	-moz-transition: all .05s ease;
+	-ms-transition: all .05s ease;
+	-o-transition: all .05s ease;
+	transition: all .05s ease;*/
+
+	overflow:hidden;
+	text-transform:uppercase;
+	/*font: 0/0 a;*/
+	font-size: 48px;
+    text-shadow: none;
+    /*color: transparent;*/
+}
+
+.gActive {
+	-webkit-transform: translate(0, 6px);
+	-moz-transform: translate(0, 6px);
+	transform: translate(0, 6px);
+}
+
+.idle {
+	-webkit-box-shadow: 0px 12px 0px #888;
+    -moz-box-shadow: 0px 12px 0px #888;
+    box-shadow: 0px 12px 0px #888;
+}
+
+.active {
+	-webkit-box-shadow: 0px 6px 0px #888;
+    -moz-box-shadow: 0px 6px 0px #888;
+    box-shadow: 0px 6px 0px #888;
+}
+
+#fireBtn { 
+	background:#ff0000 url("images/twitter.png") no-repeat center center;
+	-webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+#powerBtn {
+	background:#2CA9E1 url("images/twitter.png") no-repeat center center;
+	-webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+
+

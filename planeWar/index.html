@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Plane War</title>
+<!-- Styling -->
+    <style type=text/css>
+        body{
+           background:#fff;
+           color:#222;
+           margin:1em 0 2em 6em;
+           padding:0;
+        }
+        #gjs-loader {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+<!-- Start javascript/main.js -->
+    <script src="./public/yabble.js"></script>
+    <script src="./public/gamejs.min.js"></script>
+    <script src="../lib/jquery-2.1.0.min.js"></script>
+    <script src="./javascript/jcanvas.min.js"></script>
+    <script type="text/javascript" src="./javascript/jquery.qrcode.js"></script>
+    <script>
+        require.setModuleRoot('./javascript/');
+        require.run('main')
+    </script>
+</head>
+<!-- Html -->
+<body bgcolor="#000000">
+    <div>
+        <div id="headerInfo">
+            <div id="leftCol">
+                <div id="rmID" class="rmID"> </div>
+                <div id="qrcode" ><img id="qrgen" src="" /></div>
+                <div id="qr" style="margin:0 auto; text-align:center"></div>
+                <div class="chooser">
+                    <a class="button" id="startGameBtn" >Start Game</a>
+                    <a class="button" onclick="stopbgm();" id="stopbgmBtn">Stop bgm</a>
+                    <div id="console" class="console"></div>
+                    <div id="status" class="status"></div>
+
+                </div>
+            </div>
+            <div id="rightCol">
+                <div style="border:1px solid #fff; padding:10px; margin:0 auto; width:700px; text-align:left">
+                    Game Play: <br/>
+                    1. Get to the mobile phone entry point by scanning the QR code<br/>
+                    2. You will need to calibrate your sensors for the first time<br/>
+                    3. Type in the room number and your name(optional) then press "Connect"<br/>
+                    4. Choose your plane<br/>
+                    5. After everyone is ready, press start game button on this page<br/>
+                    6. Fight until the last man standing<br/>
+                    7. press restart game to restart the game (if you can't see your name/player X in the main screen, press the reconnect button on your phone)<br/>
+                </div>
+                <div id="board" style="margin:0 auto; width:220px; text-align:left">
+                    <img src="./img/powerUp1.png" /> Shield <br/>
+                    <img src="./img/powerUp2.png" /> High power bullet ( 10sec ) <br/>
+                    <img src="./img/powerUp3.png" /> Heal<br/>
+                    <img src="./img/powerUp4.png" /> Fast shooting bullet ( 10sec )<br/>
+                    <img src="./img/powerUp5.png" /> 1 hit GG<br/>
+                </div>
+                <div id="plane chooser" class="chooser">
+                    <div class="chooser-item" id="p1"><div id="txtp1"></div><img src="./img/plane1.png"><div class="hpBar" id='hp1'></div><div class="hpNumber" id="hpNumber1">10</div></div>
+                    <div class="chooser-item" id="p2"><div id="txtp2"></div><img src="./img/plane2.png"><div class="hpBar" id='hp2'></div><div class="hpNumber" id="hpNumber2">10</div></div>
+                    <div class="chooser-item" id="p3"><div id="txtp3"></div><img src="./img/plane3.png"><div class="hpBar" id='hp3'></div><div class="hpNumber" id="hpNumber3">10</div></div>
+                    <div class="chooser-item" id="p4"><div id="txtp4"></div><img src="./img/plane4.png"><div class="hpBar" id='hp4'></div><div class="hpNumber" id="hpNumber4">10</div></div>
+                    <div class="chooser-item" id="p5"><div id="txtp5"></div><img src="./img/plane5.png"><div class="hpBar" id='hp5'></div><div class="hpNumber" id="hpNumber5">10</div></div>
+                    <div class="chooser-item" id="p6"><div id="txtp6"></div><img src="./img/plane6.png"><div class="hpBar" id='hp6'></div><div class="hpNumber" id="hpNumber6">10</div></div>
+                </div>
+            </div>
+        </div>
+        <!-- <img id="gjs-loader" src="./public/ajax-loader.gif"> -->
+        <div class="center" style="padding: 20px;">
+        <canvas id="gjs-canvas"></canvas>
+        </div>
+
+    </div>
+    <audio id="bgm" loop>
+    <source src="./sound/Emicrania_instrumental.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="countDownSound">
+    <source src="./sound/countdown.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="startSound">
+    <source src="./sound/bell1.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

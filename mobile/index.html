@@ -1,0 +1,104 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body oncontextmenu="return false;">
+
+	<audio id="fireSound" src="../planeWar/sound/shoot.mp3" preload="auto"></audio>
+	<audio id="clickSound" src="../planeWar/sound/click.mp3" preload="auto"></audio>
+
+	<div id="debug"></div>
+	<div id="debug3"></div>
+	<div id="debug2"></div>
+	<div data-role="page" id="pageconnect">
+		<div data-role="header">
+			<h1>Plane War</h1>
+			<a href="#pagesetting" class="ui-btn-right navButton" data-transition="slide" id="settingBtn">Setting</a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form method="post">
+				<div class="ui-field-contain">
+					<div><label for="roomid">Room Number:</label>
+					<input type="text" name="roomid" id="roomid"></div>
+					<div>
+						<label for="playername">Player Name: (Optional)</label>
+						<input type="text" name="playername" id="playername">
+						<!-- <a id="submitNameBtn" href="#" class="settingBtn">Submit</a> -->
+					</div>
+				</div>
+			</form>
+			<a href="#" data-transition="slide" id="connectBtn" class="gameBtn idle">Connect</a>
+		</div>
+	</div>
+	<div data-role="page" id="pagesetting">
+		<div data-role="header">
+			<h1>Setting</h1>
+			<a href="#pageconnect" data-transition="slide" class="ui-btn-left navButton" id="backBtn" onclick="calStop();">Back</a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<a id="startCalibrateBtn" class="settingBtn" onclick="startCal();">Start Calibrate</a>
+			<div id="calibration" class="calibration hide">
+				<a id="calibrateBtn" onclick="cal1();" class="settingBtn idle">Calibrate</a>
+				<div id="caltext"></div>
+			</div>
+			<div id="calStatus"></div>
+			<!-- <a href="#" id="rotateBtn" class="settingBtn">Rotate Screen</a> -->
+		</div>
+	</div>
+	<div data-role="page" id="pagewait">
+		<div data-role="main" class="ui-content">
+			<!-- <a href="#" data-rel="back">Back</a> -->
+			<a href="#" id="reconnectBtn" class="settingBtn">Reconnect</a>
+			<h2 id="playerNameField" class="center"></h2>
+			<h2 class="center">Waiting for other player...</h2>
+
+			
+
+			<h2 class="center">Select your plane</h2>
+			<table id="planeTable">
+				<tr>
+					<!-- <td><a href="#" id="plane1" class="planeBtn">1</a></td>
+					<td><a href="#" id="plane2" class="planeBtn">2</a></td>
+					<td><a href="#" id="plane3" class="planeBtn">3</a></td> -->
+					<td><img id="plane1" class="planeBtn" src="../planeWar/img/plane1.png" /></td>
+					<td><img id="plane2" class="planeBtn" src="../planeWar/img/plane2.png" /></td>
+					<td><img id="plane3" class="planeBtn" src="../planeWar/img/plane3.png" /></td>
+					<!-- <td><a href="#" id="plane1" class="planeBtn"><img src="../box2dCar2/img/plane1.png" /></a></td>
+					<td><a href="#" id="plane2" class="planeBtn"><img src="../box2dCar2/img/plane2.png" /></a></td>
+					<td><a href="#" id="plane3" class="planeBtn"><img src="../box2dCar2/img/plane3.png" /></a></td> -->
+				</tr>
+				<tr>
+					<!-- <td><a href="#" id="plane4" class="planeBtn">4</td>
+					<td><a href="#" id="plane5" class="planeBtn">5</a></td>
+					<td><a href="#" id="plane6" class="planeBtn">6</a></td> -->
+					<td><img id="plane4" class="planeBtn" src="../planeWar/img/plane4.png" /></td>
+					<td><img id="plane5" class="planeBtn" src="../planeWar/img/plane5.png" /></td>
+					<td><img id="plane6" class="planeBtn" src="../planeWar/img/plane6.png" /></td>
+					<!-- <td><a href="#" id="plane4" class="planeBtn"><img src="../box2dCar2/img/plane4.png" /></a></td>
+					<td><a href="#" id="plane5" class="planeBtn"><img src="../box2dCar2/img/plane5.png" /></a></td>
+					<td><a href="#" id="plane6" class="planeBtn"><img src="../box2dCar2/img/plane6.png" /></a></td> -->
+				</tr>
+			</table>
+			<!-- <a href="#pageselectplane" data-transition="pop" id="goBtn" class="gameBtn idle">Go</a> -->
+		</div>
+	</div>
+	<div data-role="page" id="pageplay">
+		<div data-role="main" class="ui-content">
+			<div class="gameButton"><a href="#" id="fireBtn" class="gameBtn idle">Fire</a></div>
+			<div class="gameButton"><a href="#" id="powerBtn" class="gameBtn idle">Power</a></div>
+		</div>
+	</div>
+	<div data-role="page" id="pageresult">
+		<div data-role="main" class="ui-content">
+			<div id="playresult">YOU LOSE</div>
+		</div>
+	</div>
+
+</body>
+</html>
